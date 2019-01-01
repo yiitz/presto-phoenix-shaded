@@ -36,7 +36,6 @@
 	</properties>
 
 	<modules>
-		<module>presto-hbase-testing-util-shaded</module>
 		<module>presto-phoenix-core-shaded</module>
 	</modules>
 
