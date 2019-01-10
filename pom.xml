@@ -68,6 +68,12 @@
 									<pattern>com.google</pattern>
 									<shadedPattern>${shaded.package}.com.google</shadedPattern>
 								</relocation>
+
+								<!-- top level io -->
+								<relocation>
+									<pattern>io.netty</pattern>
+									<shadedPattern>${shaded.package}.io.netty</shadedPattern>
+								</relocation>
 							</relocations>
 							<transformers>
 								<!-- Need to filter out some extraneous license files. Don't use the ApacheLicenseRT because it just removes all META-INF/LICENSE(.txt)? files, including ours. -->
