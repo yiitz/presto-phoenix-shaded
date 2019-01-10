@@ -51,6 +51,8 @@
 							<artifactSet>
 								<includes>
 									<include>com.google.protobuf:*</include>
+									<include>com.google.guava:*</include>
+									<include>com.google.inject:*</include>
 									<include>io.netty:*</include>
 									<include>org.apache.phoenix:*</include>
 								</includes>
