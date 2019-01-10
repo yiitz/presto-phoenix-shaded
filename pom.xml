@@ -4,30 +4,10 @@
 	<name>Presto Phoenix Shaded</name>
 	<description>a parent pom of apache phoenix shaded for presto.</description>
 
-	<groupId>com.github.combineads</groupId>
+	<groupId>com.github.yiitz</groupId>
 	<artifactId>presto-phoenix-shaded</artifactId>
 	<version>1.0</version>
 	<packaging>pom</packaging>
-
-	<url>https://github.com/combineads/presto-phoenix-shaded</url>
-	<licenses>
-		<license>
-			<name>Apache License 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0</url>
-			<distribution>repo</distribution>
-		</license>
-	</licenses>
-	<developers>
-		<developer>
-			<name>Byunghwa Yun</name>
-			<email>combine@combineads.co.kr</email>
-		</developer>
-	</developers>
-	<scm>
-		<connection>scm:git:git://github.com/combineads/presto-phoenix-shaded.git</connection>
-		<developerConnection>scm:git:git://github.com/combineads/presto-phoenix-shaded.git</developerConnection>
-		<url>https://github.com/combineads/presto-phoenix-shaded</url>
-	</scm>
 
 	<properties>
 		<phoenix.version>5.0.0-HBase-2.0</phoenix.version>
@@ -53,49 +33,6 @@
 
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-gpg-plugin</artifactId>
-				<version>1.5</version>
-				<executions>
-					<execution>
-						<id>sign-artifacts</id>
-						<phase>verify</phase>
-						<goals>
-							<goal>sign</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.sonatype.plugins</groupId>
-				<artifactId>nexus-staging-maven-plugin</artifactId>
-				<version>1.6.7</version>
-				<extensions>true</extensions>
-				<configuration>
-					<serverId>ossrh</serverId>
-					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
-					<autoReleaseAfterClose>true</autoReleaseAfterClose>
-				</configuration>
-			</plugin>
-			<plugin>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>3.0.0</version>
-				<executions>
-					<execution>
-						<id>javadoc-jar</id>
-						<phase>package</phase>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-						<configuration>
-							<verbose>true</verbose>
-							<includeDependencySources>true</includeDependencySources>
-							<additionalOptions>-Xdoclint:none</additionalOptions>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
