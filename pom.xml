@@ -49,18 +49,10 @@
 							<promoteTransitiveDependencies>true</promoteTransitiveDependencies>
 							<shadeTestJar>false</shadeTestJar>
 							<artifactSet>
-								<excludes>
-									<exclude>org.apache.hbase:hbase-resource-bundle</exclude>
-									<exclude>org.slf4j:*</exclude>
-									<exclude>com.google.code.findbugs:*</exclude>
-									<exclude>com.github.stephenc.findbugs:*</exclude>
-									<exclude>org.apache.yetus:*</exclude>
-									<exclude>log4j:*</exclude>
-									<exclude>commons-logging:*</exclude>
-									<exclude>org.apache.phoenix:phoenix-client</exclude>
-									<exclude>xom:xom</exclude>
-									<exclude>com.sun.jersey:jersey-server</exclude>
-								</excludes>
+								<includes>
+									<include>com.google.protobuf:*</include>
+									<include>io.netty:*</include>
+								</includes>
 							</artifactSet>
 							<relocations>
 								<!-- top level com not including sun -->
