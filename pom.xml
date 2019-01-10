@@ -52,7 +52,11 @@
 								<includes>
 									<include>com.google.protobuf:*</include>
 									<include>io.netty:*</include>
+									<include>org.apache.phoenix:*</include>
 								</includes>
+								<excludes>
+									<exclude>org.apache.phoenix:phoenix-client</exclude>
+								</excludes>
 							</artifactSet>
 							<relocations>
 								<!-- top level com not including sun -->
